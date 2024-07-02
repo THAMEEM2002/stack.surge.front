@@ -7,13 +7,19 @@
     height: 100vh;
     margin: 0;
   }
-  
+  h1{
+    font-family:'Times New Roman', Times, serif;
+    color: #00ccff;
+  }
+  h2{
+    color: #b2f0ff;
+  }
   .login-container {
-    background-color: #00000000;
+    background-color: #00000085;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 400px;
     margin-top: 5%;
     margin-left: 35%;
     margin-right: 35%;

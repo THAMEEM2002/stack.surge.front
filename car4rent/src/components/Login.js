@@ -20,10 +20,11 @@ function Login() {
   return (
     <div className="App">
       <div className="login-container">
+        <h1>Car Rental App</h1>
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="username">Username</label>
+            <label htmlFor="username">Username : </label>
             <input
               type="text"
               id="username"
@@ -34,7 +35,7 @@ function Login() {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Password : </label>
             <input
               type="password"
               id="password"
