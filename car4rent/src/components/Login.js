@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Login.css';
+import './content'
 
-function Login() {
+function Login({ onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -10,8 +11,7 @@ function Login() {
     e.preventDefault();
     // For simplicity, hardcoded username and password
     if (username === 'admin' && password === 'password') {
-      alert('Login successful!');
-      // Redirect or do something after successful login
+      onLogin(); // Trigger login action in App component
     } else {
       setError('Invalid username or password. Please try again.');
     }

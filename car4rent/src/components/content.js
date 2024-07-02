@@ -1,68 +1,72 @@
-// src/script.js
-import "./content.css"
+import React from 'react';
+import './content.css';
+
 const cars = [
-    { 
-      id: 1, 
-      brand: 'Toyota', 
-      model: 'Camry', 
-      price: 50, 
-      img: 'https://i.ytimg.com/vi/OBFEG-LiJyU/maxresdefault.jpg' 
-    },
-    { 
-      id: 2, 
-      brand: 'Honda', 
-      model: 'Accord', 
-      price: 55,
-      img: 'https://www.usnews.com/object/image/0000018c-40eb-df39-a7fd-6bff9fe10001/01-2024-honda-accord-hybrid-angular-front-jmv.JPG?update-time=1701896347582&size=responsive640' 
-    },
-    { 
-      id: 3, 
-      brand: 'Ford', 
-      model: 'Mustang', 
-      price: 70,
-      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Iy_BVHf0QKKKNrE1SSmW7ABbgX3tl8fN_USjn2_vrsVEMD9RGJGBswGfrnGvuu7CDQs&usqp=CAU' 
-    },
-    { 
-      id: 4, 
-      brand: 'Chevrolet', 
-      model: 'Camaro', 
-      price: 65,
-      img: 'chevrolet_camaro.jpg' // Replace with the actual image file name
-    },
-    { 
-      id: 5, 
-      brand: 'Nissan', 
-      model: 'Altima', 
-      price: 60,
-      img: 'nissan_altima.jpg' // Replace with the actual image file name
-    }
-  ];
-  
-  
-  export function displayCars() {
-    const carList = document.getElementById('car-list');
-    carList.innerHTML = '';
-  
-    cars.forEach(car => {
-      const carElement = document.createElement('div');
-      carElement.classList.add('car');
-      carElement.innerHTML = `
-        <h3>${car.brand} ${car.model}</h3>
-        <p>Price per day: $${car.price}</p>
-        <button onclick="reserveCar(${car.id})">Reserve</button>
-      `;
-      carList.appendChild(carElement);
-    });
+  { 
+    id: 1, 
+    brand: 'Toyota', 
+    model: 'Camry', 
+    price: 50, 
+    img:`https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Camry/10926/1708690549497/front-left-side-47.jpg`
+  },
+  { 
+    id: 2, 
+    brand: 'Honda', 
+    model: 'Accord', 
+    price: 55,
+    img: 'https://www.usnews.com/object/image/0000018c-40eb-df39-a7fd-6bff9fe10001/01-2024-honda-accord-hybrid-angular-front-jmv.JPG?update-time=1701896347582&size=responsive640' 
+  },
+  { 
+    id: 3, 
+    brand: 'Ford', 
+    model: 'Mustang', 
+    price: 70,
+    img: 'https://cdn.motor1.com/images/mgl/J7EjQ/s1/electric-ford-mustang-by-charge-cars.jpg' 
+  },
+  { 
+    id: 4, 
+    brand: 'Chevrolet', 
+    model: 'Camaro', 
+    price: 65,
+    img: 'https://www.autodeal.com.ph/custom/car-model-photo/original/2019-chevrolet-camaro-5ca1c0dab9ac0.jpg' 
+  },
+  { 
+    id: 5, 
+    brand: 'Nissan', 
+    model: 'Altima', 
+    price: 60,
+    img: 'https://www.motortrend.com/uploads/2023/08/2024-Nissan-Altima-2.5SL-AWD-001-Front-three-quarter.jpg'
   }
-  
-  export function reserveCar(carId) {
-    const pickupDate = document.getElementById('pickup-date').value;
-    const returnDate = document.getElementById('return-date').value;
+];
+
+function Content() {
+  // Function to handle car reservation
+  const reserveCar = (carId) => {
+    const pickupDate = prompt('Enter pickup date:');
+    const returnDate = prompt('Enter return date:');
   
     if (pickupDate && returnDate) {
       alert(`Car with ID ${carId} reserved from ${pickupDate} to ${returnDate}`);
     } else {
-      alert('Please select pickup and return dates.');
+      alert('Please enter pickup and return dates.');
     }
-  }
-  
+  };
+
+  return (
+    <div className="content">
+      <h1>Car Inventory</h1>
+      <div id="car-list">
+        {cars.map(car => (
+          <div key={car.id} className="car">
+            <h3>{car.brand} {car.model}</h3>
+            <img src={car.img} alt={`${car.brand} ${car.model}`} />
+            <p>Price per day: ${car.price}</p>
+            <button onClick={() => reserveCar(car.id)}>Reserve</button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default Content;
