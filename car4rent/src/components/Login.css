@@ -1,28 +1,17 @@
-.Login{
+.App {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    align-content: center;
-    height: 100vh;
-    margin: 0;
+    background-color: #f0f0f0;
   }
-  h1{
-    font-family:'Times New Roman', Times, serif;
-    color: #00ccff;
-  }
-  h2{
-    color: #b2f0ff;
-  }
+  
   .login-container {
     background-color: #00000085;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 400px;
-    margin-top: 5%;
-    margin-left: 35%;
-    margin-right: 35%;
   }
   
   form {
@@ -36,6 +25,7 @@
   
   label {
     margin-bottom: 5px;
+    color: white;
   }
   
   input[type="text"],
@@ -54,6 +44,7 @@
     border: none;
     cursor: pointer;
     border-radius: 4px;
+    margin-top: 10px;
   }
   
   button:hover {

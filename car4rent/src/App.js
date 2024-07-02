@@ -2,24 +2,21 @@ import './App.css';
 import {BrowserRouter,Route, Link, Routes} from "react-router-dom"
 import Login from './components/Login'
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
+
   return (
     <div>
-      <main>
-        <BrowserRouter>
-        <Routes>
-      <Route path="/components/Login.js" element={<Login/>}/> 
-      <nav>
-      <ul>
-        <li>
-          <Link to = {"/components"}>Login</Link>
-        </li>
-      </ul>
-      </nav>
-    </Routes>
-    </BrowserRouter>
-    </main>
+      <Login/>
     </div>
   );
 }
-export default App;
 
+export default App;
