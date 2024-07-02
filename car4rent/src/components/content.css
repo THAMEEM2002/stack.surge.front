@@ -4,7 +4,7 @@
 }
 
 h1 {
-  color: #00204a;
+  color: #030303;
 }
 
 .car {
@@ -28,7 +28,7 @@ h1 {
 .car button {
   padding: 8px 16px;
   font-size: 14px;
-  background-color: #005792;
+  background-color: #d7d9da;
   color: rgb(211, 0, 0);
   border: none;
   cursor: pointer;

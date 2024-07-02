@@ -21,8 +21,7 @@ function Login({ onLogin }) {
     <div className="App">
       <div className="login-container">
         <h1>Car Rental App</h1>
-        <h2>Login</h2>
-        <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="username">Username : </label>
             <input
