@@ -1,12 +1,43 @@
 // src/script.js
 import "./content.css"
 const cars = [
-    { id: 1, brand: 'Toyota', model: 'Camry', price: 50 },
-    { id: 2, brand: 'Honda', model: 'Accord', price: 55 },
-    { id: 3, brand: 'Ford', model: 'Mustang', price: 70 },
-    { id: 4, brand: 'Chevrolet', model: 'Camaro', price: 65 },
-    { id: 5, brand: 'Nissan', model: 'Altima', price: 60 }
+    { 
+      id: 1, 
+      brand: 'Toyota', 
+      model: 'Camry', 
+      price: 50, 
+      img: 'https://i.ytimg.com/vi/OBFEG-LiJyU/maxresdefault.jpg' 
+    },
+    { 
+      id: 2, 
+      brand: 'Honda', 
+      model: 'Accord', 
+      price: 55,
+      img: 'https://www.usnews.com/object/image/0000018c-40eb-df39-a7fd-6bff9fe10001/01-2024-honda-accord-hybrid-angular-front-jmv.JPG?update-time=1701896347582&size=responsive640' 
+    },
+    { 
+      id: 3, 
+      brand: 'Ford', 
+      model: 'Mustang', 
+      price: 70,
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Iy_BVHf0QKKKNrE1SSmW7ABbgX3tl8fN_USjn2_vrsVEMD9RGJGBswGfrnGvuu7CDQs&usqp=CAU' 
+    },
+    { 
+      id: 4, 
+      brand: 'Chevrolet', 
+      model: 'Camaro', 
+      price: 65,
+      img: 'chevrolet_camaro.jpg' // Replace with the actual image file name
+    },
+    { 
+      id: 5, 
+      brand: 'Nissan', 
+      model: 'Altima', 
+      price: 60,
+      img: 'nissan_altima.jpg' // Replace with the actual image file name
+    }
   ];
+  
   
   export function displayCars() {
     const carList = document.getElementById('car-list');
